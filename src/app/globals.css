@@ -1,0 +1,672 @@
+/* Overall page reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Nav */
+.main {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  width: 100%;
+}
+
+.logo {
+  font-size: xx-large;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.gap {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+.gap li {
+  color: black;
+  font-family: 'Lucida Sans';
+  font-weight: bolder;
+
+}
+.gap {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.gap a {
+  text-decoration: none; 
+  color: black; 
+}
+
+.gap a:hover {
+  color: darkgray; 
+}
+
+/* Other styles */
+
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.hiddenOnDesktop {
+  display: none;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none; 
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  padding: 15px;
+  width: 100%;
+  text-align: start;
+  height: 40vh;
+}
+.m-login{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
+.mobile-menu ul li:hover {
+  text-decoration: underline;
+
+}
+
+.list-non a{
+  text-decoration: none;
+  color: black;
+}
+.list-non {
+  list-style-type: none;
+  
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .gap,
+  .btn-group {
+    display: none; 
+  }
+
+  .hiddenOnDesktop {
+    display: block; 
+  }
+
+  .mobile-menu {
+    display: flex; 
+  }
+}
+
+
+
+/* Banner */
+.banner {
+  background-image: url("/Bg.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin: 0;
+}
+
+.bannerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+}
+
+.bannerContent h1 {
+  font-size: 4rem;
+  color: rgb(255, 250, 218);
+  line-height: 1.2;
+}
+
+.bannerContent p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* Button styling within banner */
+.btn1 {
+  background-color: rgb(228, 139, 101);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: medium;
+  margin: 5px;
+  transition: box-shadow 0.3s;
+}
+
+.btn1:hover {
+  box-shadow: 2px 4px 10px rgba(187, 124, 96, 0.6);
+  /* Adds a shadow on hover */
+}
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .bannerContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .bannerContent p {
+    font-size: 1.2rem;
+  }
+
+  .btn1 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bannerContent h1 {
+    font-size: 1.8rem;
+  }
+
+  .bannerContent p {
+    font-size: 1rem;
+  }
+
+  .btn1 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Card Section Styles */
+.card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  position: relative;
+  color: #333;
+  margin: 20px 0;
+}
+
+.card-heading::before,
+.card-heading::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #333;
+  margin: 0 15px;
+}
+
+.cardsection {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 250, 218);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: rgb(192, 130, 103);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h1 {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.card p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.card button {
+  margin-top: 10px;
+  width: fit-content;
+}
+
+/* Center the image */
+.card-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Grid Layout for Cards */
+.gridsection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .gridsection {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card h1 {
+    font-size: 2.5rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridsection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .card h1 {
+    font-size: 2rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gridsection {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 95%;
+  }
+
+  .card h1 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Brands Section */
+.brands-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  background-color: rgb(255, 250, 218);
+}
+
+.brands-heading::before,
+.brands-heading::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #333;
+  margin: 0 15px;
+}
+
+.brands-heading h1 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.brands-section {
+  background-color: rgb(255, 250, 218);
+  height: auto;
+  margin: 0;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-logo {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  gap: 5%;
+  flex-wrap: wrap;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .brands-heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .brand-logo {
+    gap: 10%;
+  }
+}
+
+/* footer */
+.footer {
+
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(192, 130, 103);
+  color: white;
+  padding: 50px;
+  height: 50vh;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-column h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    padding: 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .footer-column h1 {
+    font-size: 1.5rem;
+  }
+
+  .footer-column a {
+    font-size: 1rem;
+  }
+}
+
+/* Contact Us Page */
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 250, 218);
+  color: rgb(192, 130, 103);
+  padding: 40px 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.contact-us h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.contact-us p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Form Styling */
+.contact-form {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-us{
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid rgb(192, 130, 103);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.contact-form button {
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: rgb(192, 130, 103);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: rgb(228, 139, 101);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .contact-us h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact-us p {
+    font-size: 1.2rem;
+  }
+
+  .contact-form {
+    gap: 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-us h1 {
+    font-size: 2rem;
+  }
+
+  .contact-us p {
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    padding: 0 10px;
+  }
+
+  .contact-form button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+/* Common Form Styling */
+.form-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container input,
+.form-container textarea {
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid rgb(192, 130, 103);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.form-container button {
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: rgb(192, 130, 103);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: rgb(228, 139, 101);
+}
+
+/* Specific Styles for Sign Up/Login Page */
+.sign-up-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: rgba(255, 250, 218, 1);
+  color: #333;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+  max-width: 400px;
+}
+
+.sign-up-login h1 {
+  font-size: 2.5rem;
+  color: rgb(192, 130, 103);
+  margin-bottom: 10px;
+}
+
+.sign-up-login p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.btn1 {
+  background-color: rgb(192, 130, 103);
+  color: white;
+}
+
+.btn2 {
+  background-color: transparent;
+  color: rgb(192, 130, 103);
+  border: 1px solid rgb(192, 130, 103);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn2:hover {
+  background-color: rgba(192, 130, 103, 0.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .sign-up-login h1 {
+    font-size: 2rem;
+  }
+
+  .sign-up-login p {
+    font-size: 1rem;
+  }
+
+  .sign-up-form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sign-up-login h1 {
+    font-size: 1.8rem;
+  }
+
+  .sign-up-login p {
+    font-size: 0.9rem;
+  }
+
+  .sign-up-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .sign-up-form button {
+    padding: 10px;
+  }
+}

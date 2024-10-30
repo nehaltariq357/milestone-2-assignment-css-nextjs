@@ -73,23 +73,28 @@
   text-align: start;
   height: 40vh;
 }
-.m-login{
-  position: absolute;
-  top: 50%;
-  right: 50%;
-}
-.mobile-menu ul li:hover {
-  text-decoration: underline;
 
+.mobile-menu.show {
+  display: flex;
 }
 
-.list-non a{
+.m-login {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-non a {
   text-decoration: none;
   color: black;
 }
+
 .list-non {
   list-style-type: none;
-  
+}
+
+.mobile-menu ul li:hover {
+  text-decoration: underline;
 }
 
 /* Responsive Styling */
@@ -101,10 +106,6 @@
 
   .hiddenOnDesktop {
     display: block; 
-  }
-
-  .mobile-menu {
-    display: flex; 
   }
 }
 
@@ -149,7 +150,7 @@
 
 /* Button styling within banner */
 .btn1 {
-  background-color: rgb(228, 139, 101);
+  background-color: brown;
   color: white;
   padding: 10px 20px;
   border-radius: 10px;

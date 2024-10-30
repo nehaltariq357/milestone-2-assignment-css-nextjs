@@ -1,18 +1,19 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="main">
+    <>
+     <nav className="main">
       <div className="logo">Filtro</div>
-
+      
       {/* Desktop Links */}
       <ul className="gap">
         <li>
@@ -37,14 +38,16 @@ const NavBar = () => {
         <button className="btn1">Get the App</button>
       </div>
 
-           <div className="hiddenOnDesktop">
+      {/* Hamburger Icon for Mobile */}
+      <div className="hiddenOnDesktop">
         <button onClick={toggleMenu} className="btn1">
           <GiHamburgerMenu size={24} />
         </button>
       </div>
 
+    </nav>
       {/* Mobile Menu */}
-      <div className={`mobile-menu ${isOpen ? 'show' : ''}`}>
+      <div className={`mobile-menu ${isOpen ? "show" : ""}`}>
         <ul className="list-non">
           <li>
             <Link href="/">Home</Link>
@@ -68,7 +71,8 @@ const NavBar = () => {
           </Link>
         </ul>
       </div>
-    </nav>
+    </>
+   
   );
 };
 

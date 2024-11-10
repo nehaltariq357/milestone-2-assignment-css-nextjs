@@ -1,4 +1,3 @@
-/* Overall page reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -30,7 +29,7 @@
 
 .gap li {
   color: black;
-  font-family: 'Lucida Sans';
+  font-family: "Lucida Sans";
   font-weight: bolder;
 }
 
@@ -57,8 +56,8 @@
 .mobile-menu {
   visibility: hidden;
   flex-direction: column;
-  position: fixed; 
-  top: 60px; 
+  position: fixed;
+  top: 60px;
   right: 0;
   background-color: rgb(255, 255, 255);
   padding: 15px;
@@ -67,7 +66,7 @@
   height: auto;
   opacity: 0;
   transform: translateY(-20px);
-  z-index: 10000; 
+  z-index: 10000;
 }
 
 /* Show Mobile Menu */
@@ -106,8 +105,6 @@
     display: block;
   }
 }
-
-
 
 /* Banner */
 .banner {
@@ -163,7 +160,6 @@
   box-shadow: 2px 4px 10px rgba(187, 124, 96, 0.6);
   /* Adds a shadow on hover */
 }
-
 
 /* Responsive styling */
 @media (max-width: 768px) {
@@ -229,7 +225,7 @@
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  margin: 10px;
+  margin: 50px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
   display: flex;
@@ -324,7 +320,6 @@
   }
 }
 
-
 /* Brands Section */
 .brands-heading {
   display: flex;
@@ -381,13 +376,12 @@
 
 /* footer */
 .footer {
-
   display: flex;
   justify-content: space-around;
   background-color: rgb(192, 130, 103);
   color: white;
   padding: 50px;
-  height: 50vh;
+  height: 40vh;
 }
 
 .footer-container {
@@ -409,7 +403,6 @@
 .footer-column ul {
   list-style: none;
   padding: 0;
-  
 }
 
 .footer-column li {
@@ -448,7 +441,7 @@
   }
 }
 
-/* Contact Us Page */
+/* Contact Page */
 .contact-us {
   display: flex;
   flex-direction: column;
@@ -458,6 +451,8 @@
   padding: 40px 20px;
   max-width: 100%;
   margin: 0 auto;
+  height: auto;
+  box-sizing: border-box;
 }
 
 .contact-us h1 {
@@ -471,17 +466,18 @@
   text-align: center;
 }
 
-/* Form Styling */
 .contact-form {
   max-width: 600px;
   width: 100%;
+  padding: 30px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-.contact-us{
-  margin-top: 20px;
+  border: 2px solid rgb(192, 130, 103);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form input,
@@ -491,6 +487,13 @@
   border: 1px solid rgb(192, 130, 103);
   border-radius: 8px;
   width: 100%;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgb(192, 130, 103);
+  outline: none;
 }
 
 .contact-form button {
@@ -501,11 +504,12 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .contact-form button:hover {
   background-color: rgb(228, 139, 101);
+  transform: scale(1.02);
 }
 
 /* Responsive Styling */
@@ -520,6 +524,7 @@
 
   .contact-form {
     gap: 15px;
+    padding: 20px;
   }
 
   .contact-form input,
@@ -543,7 +548,7 @@
   }
 
   .contact-form {
-    padding: 0 10px;
+    padding: 15px;
   }
 
   .contact-form button {
@@ -551,18 +556,52 @@
     padding: 8px;
   }
 }
-/* Common Form Styling */
-.form-container {
-  max-width: 600px;
+
+/* logon page */
+
+
+.sign-up-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 250, 218);
+  color: rgb(192, 130, 103);
+  padding: 40px 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+  border: 2px solid rgb(192, 130, 103);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sign-up-login h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.sign-up-login p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Form Styling */
+.sign-up-form {
+  max-width: 400px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid rgb(192, 130, 103); 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-container input,
-.form-container textarea {
+.sign-up-form input {
   padding: 15px;
   font-size: 1rem;
   border: 1px solid rgb(192, 130, 103);
@@ -570,7 +609,7 @@
   width: 100%;
 }
 
-.form-container button {
+.sign-up-form .btn1 {
   padding: 12px;
   font-size: 1.1rem;
   background-color: rgb(192, 130, 103);
@@ -581,63 +620,51 @@
   transition: background-color 0.3s;
 }
 
-.form-container button:hover {
+.sign-up-form .btn1:hover {
   background-color: rgb(228, 139, 101);
 }
 
-/* Specific Styles for Sign Up/Login Page */
-.sign-up-login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 20px;
-  background-color: rgba(255, 250, 218, 1);
-  color: #333;
-}
-
-.sign-up-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 15px;
-  max-width: 400px;
-}
-
-.sign-up-login h1 {
-  font-size: 2.5rem;
-  color: rgb(192, 130, 103);
-  margin-bottom: 10px;
-}
-
-.sign-up-login p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.btn1 {
-  background-color: rgb(192, 130, 103);
-  color: white;
-}
-
-.btn2 {
+.sign-up-form .btn2 {
   background-color: transparent;
   color: rgb(192, 130, 103);
   border: 1px solid rgb(192, 130, 103);
-  font-size: 1rem;
+  padding: 12px;
+  font-size: 1.1rem;
   cursor: pointer;
+  border-radius: 8px;
   transition: background-color 0.3s;
 }
 
-.btn2:hover {
+.sign-up-form .btn2:hover {
   background-color: rgba(192, 130, 103, 0.1);
 }
 
 /* Responsive Styling */
 @media (max-width: 768px) {
+  .sign-up-login h1 {
+    font-size: 2.5rem;
+  }
+
+  .sign-up-login p {
+    font-size: 1.2rem;
+  }
+
+  .sign-up-form {
+    gap: 15px;
+  }
+
+  .sign-up-form input {
+    font-size: 0.9rem;
+  }
+
+  .sign-up-form .btn1,
+  .sign-up-form .btn2 {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
   .sign-up-login h1 {
     font-size: 2rem;
   }
@@ -647,25 +674,13 @@
   }
 
   .sign-up-form {
-    width: 80%;
-  }
-}
-
-@media (max-width: 480px) {
-  .sign-up-login h1 {
-    font-size: 1.8rem;
-  }
-
-  .sign-up-login p {
-    font-size: 0.9rem;
-  }
-
-  .sign-up-form {
-    width: 100%;
-    padding: 0 10px;
-  }
-
-  .sign-up-form button {
     padding: 10px;
   }
+
+  .sign-up-form .btn1,
+  .sign-up-form .btn2 {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
 }
+

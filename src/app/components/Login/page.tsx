@@ -4,7 +4,7 @@ const Login = () => (
   <div className="sign-up-login">
     <h1>Sign Up / Login</h1>
     <p>Create an account or log in to continue.</p>
-    <form className="sign-up-form form-container">
+    <form className="sign-up-form">
       <input type="text" placeholder="Username" required />
       <input type="email" placeholder="Email" required />
       <input type="password" placeholder="Password" required />

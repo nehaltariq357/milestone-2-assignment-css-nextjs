@@ -2,7 +2,6 @@
 import Banner from "./components/Banner/page";
 import Brands from "./components/Brand/page";
 import Card from "./components/Card/page";
-import Footer from "./components/Footer/page";
 
 export default function Home() {
   return (
@@ -10,7 +9,6 @@ export default function Home() {
       <Banner />
       <Card />
       <Brands />
-      <Footer />
     </div>
   );
 }

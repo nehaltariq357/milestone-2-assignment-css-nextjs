@@ -14,7 +14,7 @@ const Card = () => {
             height={400}
             className="card-image" 
           />
-          <h1>Cappuccino</h1>
+          <h3>Cappuccino</h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, molestias! Eligendi, molestiae!</p>
           <button className="btn1">Order Now</button>
         </div>
